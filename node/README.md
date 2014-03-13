@@ -138,7 +138,7 @@ $ express
 ```
 Express will create a basic directory structure for you like so:
 
-![alt text](https://github.com/bchartoff/learninglunches/blob/master/node/express.png "basic express app file structure")
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/node/express.png "basic express app file structure")
 
 img
 So, for example, `app.js` might set up your server and connect to a database, then define a few routes like:
