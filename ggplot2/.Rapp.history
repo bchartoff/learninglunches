@@ -1,0 +1,1092 @@
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Xerox Corp",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Visa Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Walgreen Co",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Delta Airlines",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "infl_amt")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) +theme(legend.position="none")#+ scale_y_reverse()
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_small.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_small.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()#+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_small.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "infl_amt")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) +theme(legend.position="none")#+ scale_y_reverse()
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_small.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "infl_amt")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012))# +theme(legend.position="none")#+ scale_y_reverse()
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_smaller.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()#+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_top20.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_top20.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_top20.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_top20.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()#+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_top20.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()#+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_top10.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) + scale_y_reverse()#+theme(legend.position="none")
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_top20.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "infl_amt")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012)) +theme(legend.position="none")#+ scale_y_reverse()
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_top20.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "infl_amt")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012))# +theme(legend.position="none")#+ scale_y_reverse()
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("lobbying_data_top10.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "infl_amt")#
+data$goog <- data$client == "Google Inc"#
+data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value,size = data$goog_size))+ scale_size(range = c(0.1, 3)) + scale_x_continuous(limits = c(2000,2012))# +theme(legend.position="none")#+ scale_y_reverse()
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("yoshino.csv")#
+data <- melt(data, id.vars = c("year"), measure.vars = c("Yoshino","PBD ")
+)
+data
+head(data)
+data <- melt(data, id.vars = c("year"), measure.vars = c("Yoshino","PBD "))
+data$PBD
+data <- melt(data, id.vars = c("year"), measure.vars = c("Yoshino","PBD"))
+head(data)
+data
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value))
+data <- read.csv("yoshino.csv")#
+data <- melt(data, id.vars = c("year"), measure.vars = c("Yoshino","PBD"))#
+# data$goog <- data$client == "Google Inc"#
+# data$goog_size <- ifelse(data$client == "Google Inc",2,.1)#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value))
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point()
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value))
+data <- read.csv("yoshino.csv")#
+data <- melt(data, id.vars = c("year"), measure.vars = c("Yoshino","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value)) + scale_x_continuous(limits=c(1990,2014))
+kwanzan all#
+data <- read.csv("kwanzan.csv")#
+data <- melt(data, id.vars = c("year"), measure.vars = c("Kwanzan","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value))
+data <- read.csv("kwanzan.csv")#
+data <- melt(data, id.vars = c("year"), measure.vars = c("Kwanzan","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value)) + scale_x_continuous(limits=c(1990,2014))
+heatmap()
+nba <- read.csv("http://datasets.flowingdata.com/ppg2008.csv", sep=",")
+nba <- nba[order(nba$PTS),]
+row.names(nba) <- nba$Name
+nba <- nba[,2:20]
+nba_matrix <- data.matrix(nba)
+nba_matrix
+read.csv("monthly_weather.csv")
+data <- read.csv("monthly_weather.csv")
+head(data)
+test <- data
+row.names(test) <- month
+row.names(test) <- test$month
+test
+head(test)
+row.names(test) <- test$month
+row.names(test) <- test$year
+nba
+heat <- csv.read("heatmap.csv")
+data <- read.csv("heatmap.csv")
+heatmap(data)
+data <- data.matrix(data)
+data
+heatmap(data)
+heatmap(data, Rowv=NA, Colv=NA, col = cm.colors(256), scale="column", margins=c(5,10))
+heatmap(data, Rowv=X, Colv=NA, col = cm.colors(256), scale="column", margins=c(5,10))
+heatmap(data, Rowv=data$X, Colv=NA, col = cm.colors(256), scale="column", margins=c(5,10))
+nba_matrix
+data <- read.csv("heatmap.csv")
+data <- read.csv("heatmap.csv")
+row.names(data) <- data$year
+data <- read.csv("heatmap.csv")#
+row.names(data) <- data$year#
+data <- data.matrix(data)#
+#
+map <- heatmap(data, Rowv=NA, Colv=NA, col = cm.colors(256), scale="column", margins=c(5,10))
+data
+data <- read.csv("heatmap.csv")#
+row.names(data) <- data$year#
+data <- data.matrix(data)#
+#
+map <- heatmap(data, Rowv=year, Colv=NA, col = cm.colors(256), scale="column", margins=c(5,10))
+data <- read.csv("heatmap.csv")#
+row.names(data) <- data$year#
+data <- data[[,2:13]#
+data <- data.matrix(data)#
+#
+map <- heatmap(data, Rowv=NA, Colv=NA, col = cm.colors(256), scale="column", margins=c(5,10))
+data <- read.csv("heatmap.csv")#
+row.names(data) <- data$year#
+data <- data[,2:13]#
+data <- data.matrix(data)#
+#
+map <- heatmap(data, Rowv=NA, Colv=NA, col = cm.colors(256), scale="column", margins=c(5,10))
+yoshino 1990#
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- melt(data, id.vars = c("year"), measure.vars = c("Yoshino","PBD"))
+sizes
+data
+data <- read.csv("yoshino.csv")
+data
+data$radius <- ifelse(sizes$year == data$year,sizes$temp,NA)
+data
+sizes
+data
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")
+merge(data,sizes,all=TRUE,by=c("year"))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year"), measure.vars = c("Yoshino","PBD","temp"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value,size=data$temp)) + scale_x_continuous(limits=c(1990,2014))
+data
+data$temp
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year"), measure.vars = c("Yoshino","PBD","temp"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value,size=data$temp)) + scale_x_continuous(limits=c(1990,2014))
+data
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value,size=data$temp)) + scale_x_continuous(limits=c(1990,2014))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value,color=data$temp),size=5) + scale_x_continuous(limits=c(1990,2014))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value,color=data$temp)) + scale_x_continuous(limits=c(1990,2014))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=temp)) + geom_line(aes(y=data$value)) + geom_point(aes(y=data$value)) + scale_x_continuous(limits=c(1990,2014))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + scale_x_continuous(limits=c(1990,2014)) #
+ggplot(data, aes(x=year,group=variable,color=temp)) + geom_point(aes(y=data$value)) + scale_x_continuous(limits=c(1990,2014))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + scale_x_continuous(limits=c(1990,2014)) #
++ ggplot(data, aes(x=year,group=variable,color=temp)) + geom_point(aes(y=data$value)) + scale_x_continuous(limits=c(1990,2014))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot(data, aes(x=year,group=variable,color=variable)) + geom_line(aes(y=data$value)) + scale_x_continuous(limits=c(1990,2014)) + ggplot(data, aes(x=year,group=variable,color=temp)) + geom_point(aes(y=data$value)) + scale_x_continuous(limits=c(1990,2014))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot() + geom_line(aes(x=data$year, y=data$value, group = data$variable, color = data$variable)) + geom_point(aes(x=data$year, y=data$value, group = data$variable, color = data$temp)) + scale_x_continuous(limits=c(1990,2014))
+ggplot() + geom_line(aes(x=data$year, y=data$value, group = data$variable, color = data$variable)) + geom_point(aes(x=data$year, y=data$value, group = data$variable, color = data$temp))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot() + geom_line(aes(x=data$year, y=data$value, group = data$variable, color = data$variable))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+ggplot() + geom_point(aes(x=data$year, y=data$value, group = data$variable, color = data$temp))# + geom_line(aes(x=data$year, y=data$value, group = data$variable, color = data$variable))#+ scale_x_continuous(limits=c(1990,2014))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(aes(x=data$year, y=data$value, group = data$variable, color = data$temp))#
+p <- p + geom_line(aes(x=data$year, y=data$value, group = data$variable, color = data$variable))#+ scale_x_continuous(limits=c(1990,2014))
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(aes(x=data$year, y=data$value, group = data$variable, color = data$temp))#
+p <- p + geom_line(aes(y=data$value, group = data$variable, color = data$variable))#+ scale_x_continuous(limits=c(1990,2014))
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$temp))#
+p <- p + geom_line(aes(data=data, x=data$year, y=data$value, group = data$variable, color = data$variable))#+ scale_x_continuous(limits=c(1990,2014))
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$temp))#
+p <- p + geom_line(data=data,aes(x=data$year, y=data$value, group = data$variable, color = data$variable))#+ scale_x_continuous(limits=c(1990,2014))
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, group = data$variable))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$variable))#+ scale_x_continuous(limits=c(1990,2014))
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$temp))#
+p <- p + scale_color_gradient(low="red", high="gray50")#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$variable))+ scale_x_continuous(limits=c(1990,2014))#
+p
+data$temp
+data
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$variable))+ scale_x_continuous(limits=c(1990,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp))
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, color = data$variable))+ scale_x_continuous(limits=c(1990,2014))#
+p
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$temp))+ scale_x_continuous(limits=c(1990,2014))
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+#p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$temp))+ scale_x_continuous(limits=c(1990,2014))#
+p
+geom_point(data)
+p+geom_point(data)
+p+geom_point(aes(y=data$value))
+p
+p+geom_point(aes(x = data$year, y=data$value))
+p+geom_point(aes(x = data$year, y=data$value, color = data$temp))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+#p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$variable))+ scale_x_continuous(limits=c(1990,2014))#
+p
+p+geom_point(aes(x = data$year, y=data$value, color = data$temp),size = 5)
+p
+p+geom_point(aes(x = data$year, y=data$value, color = data$temp))
+p
+p+geom_point(aes(x = data$year, y=data$value, color = data$temp))data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable, color = data$temp))+ scale_x_continuous(limits=c(1990,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, color = data$temp))+ scale_x_continuous(limits=c(1990,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable))+ scale_x_continuous(limits=c(1990,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp),size = 5)#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp),size = 10)#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp,size = data$temp))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp,size = data$temp)) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp,size = data$temp)) + scale_size_continuous(range = c(3, 12)) + scale_size_reverse()#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp,size = data$temp)) + scale_size_continuous(range = c(3, 12)) + scale_size_reverse()#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","temp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$year, y=data$value, color = data$temp,size = data$temp)) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(x=data$year, y=data$value, group = data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$value, y=data$year, color = data$temp),size=8) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(x=data$value, y=data$year, group = data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$value, y=data$year, color = data$temp),size=8) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(x=data$value, y=data$year, group = data$variable))+ scale_y_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$value, y=data$year, color = data$temp)) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(x=data$value, y=data$year, group = data$variable))+ scale_y_continuous(limits=c(1991,2014))#
+p
+data
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$value, y=data$year, color = data$temp),size=9) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(x=data$value, y=data$year))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$value, y=data$year, color = data$temp),size=9) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(x=data$value, y=data$year))+ scale_y_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, measure.vars = c("year","postemp"), id.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$value, y=data$year, color = data$temp),size=9) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(x=data$value, y=data$year))+ scale_y_continuous(limits=c(1991,2014))#
+p
+data
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(x=data$value, y=data$year, color = data$temp),size=9) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(x=data$value, y=data$year))+ scale_y_continuous(limits=c(1991,2014))#
+p
+data
+yoshino 1990#
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$temp),size=9) + scale_size_continuous(range = c(3, 12))#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year))+ scale_x_continuous(limits=c(1991,2014))+ coord_flip()#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$temp),size=9)#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year))+ scale_x_continuous(limits=c(1991,2014))+ coord_flip()#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$temp),size=9)#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year,group=data$variable))+ scale_x_continuous(limits=c(1991,2014))+ coord_flip()#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9)#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year,group=data$variable))+ scale_x_continuous(limits=c(1991,2014))+ coord_flip()#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient2(low = muted("red"), mid = "white", high = muted("blue")#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year,group=data$variable))+ scale_x_continuous(limits=c(1991,2014))+ coord_flip()#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "red",high="blue")#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year,group=data$variable))+ scale_x_continuous(limits=c(1991,2014))+ coord_flip()#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year,group=data$variable,color=data$variable))+ scale_x_continuous(limits=c(1991,2014))+ coord_flip()#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino","PBD"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year,group=data$variable))+ scale_x_continuous(limits=c(1991,2014))+ coord_flip()#
+p
+data
+median(data$value)
+data[data$year>=1990]
+data[,data$year>=1990]
+[data$year>=1990]
+data$year>=1990
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year,group=data$variable))+ scale_x_continuous(limits=c(1991,2014))+ coord_flip()#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_line(data=data, aes(y=data$value, x=data$year,group=data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+p <- ggplot()#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,group=data$variable))+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+p <- ggplot()#
+#p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_bar(data=data, aes(y=data$value, stat="identity")+ scale_x_continuous(limits=c(1991,2014))#
+p
+yoshino 1990#
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+p <- ggplot()#
+#p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_bar(data=data, aes(y=data$value, stat="identity")#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+p <- ggplot()#
+#p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_bar(data=data, aes(y=data$value, stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+p <- ggplot()#
+#p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=year)) + geom_bar(stat="identity")
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value)) + geom_bar(stat="identity")
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value)) + geom_bar(stat="identity")+scale_x_continuous(limits=c(1991,2004))
+data <- read.csv("yoshino.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value)) + geom_bar(stat="identity")+scale_x_discrete(limits=c(1991,2004))
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value)) + geom_bar(stat="identity")
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity")
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value,fill=postemp) + geom_bar(stat="identity",position="dodge")
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value,fill=postemp)) + geom_bar(stat="identity",position="dodge")
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable)) + geom_bar(stat="identity",position="dodge")
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+yoshino 1990#
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+p <- p + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2"))#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+#p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")+coord_flip()#
+#p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")+coord_flip()#
+#p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")+coord_flip()#
+#p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+yoshino bars#
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#+coord_flip()#
+#p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#+coord_flip()#
+#p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+x
+data
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#+coord_flip()#
+#p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#+coord_flip()#
+#p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#+coord_flip()
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")+coord_flip()
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino2","PBD2"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")+coord_flip()
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")+coord_flip()
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")+coord_flip()
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")+coord_flip()
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars =c("Yoshino3","PBD3"))#
+ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")+coord_flip()
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_gradient(low = "blue",high="red")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdBlue")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+yoshino 1990#
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(type = "seq",palette="RdBlue")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51), labels = c(1:5))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdBlue")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51), labels = c(45:51))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdBlu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51), labels = c(45:52))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdBlu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51), labels = c(45, 46, 47, 48, 49, 50,51))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdBlu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51), labels = c(45, 46, 47, 48, 49, 50,51))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdBlu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdBlu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+library(RColorBrewer)
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdBlu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+display.brewer.all
+display.brewer.all()
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdYlBlu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+display.brewer.all()
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdYlBu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51,52))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdYlBu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+display.brewer.all()
+yoshino 1990#
+data <- read.csv("yoshino2.csv")#
+sizes <- read.csv("daily_weather.csv")#
+data <- merge(data,sizes,all=TRUE,by=c("year"))#
+data <- melt(data, id.vars = c("year","postemp"), measure.vars = "Yoshino2")#c("Yoshino2","PBD2"))#
+# ggplot(data,aes(x=factor(year),y=value,fill=factor(variable))) + geom_bar(stat="identity",position="dodge")#
+data$postemp <- cut(data$postemp, breaks = c(45, 46, 47, 48, 49, 50,51,52))#
+p <- ggplot() + geom_point(data=data, aes(y=data$value, x=data$year, color = data$postemp),size=9) + scale_colour_brewer(palette="RdBu")#
+#p <- p + geom_bar(data=data, aes(y=data$value, x=data$year,stat="identity"))#+ scale_x_continuous(limits=c(1991,2014))#
+p
+read.csv("2000.csv")
+data <- read.csv("2000.csv")
+head(data)
+test <- melt(data,id.vars="date",measure.vars="tavgf")
+test <- melt(data,id.vars="DATE",measure.vars="TAVGF")
+head(test)
+ggplot(test)
+ggplot(test)+geom_line(aes(x=test$DATE,y=test$value))
+ggplot(test)+geom_line(aes(x=test$DATE,y=test$value))
+ggplot(test)+geom_line(aes(x=test$DATE,y=test$value))+scale_x_continous(limits=c(19990101,19991231))
+ggplot(test)+geom_line(aes(x=test$DATE,y=test$value))+scale_x_continuous(limits=c(19990101,19991231))
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("ggplot_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value))
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("ggplot_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value))
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("ggplot_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value))
+library(ggplot2)#
+library(reshape2)#
+#
+data <- read.csv("ggplot_data.csv")#
+data <- melt(data, id.vars = c("client","year"), measure.vars = "rank")#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_line(aes(y=data$value)) #+ scale_x_continuous(limits = c(2000,2012))# +theme(legend.position="none")#+ scale_y_reverse()#
+ggplot(data, aes(x=year,group=client,color=client)) + geom_bar(aes(y=data$value,stat="identity"))
+ggplot(data, aes(x=year,group=client,color=client)) + geom_bar(aes(y=data$value,stat="identity"))
+ggplot(data, aes(x=year,color=client)) + geom_bar(aes(y=data$value,stat="identity"))
+ggplot(data, aes(x=year,x=client,color=client)) + geom_bar(stat="identity")
+ggplot(data, aes(x=year,y=value,color=client)) + geom_bar(stat="identity")
+ggplot(data, aes(x=year,y=value,fill=client)) + geom_bar(stat="identity")
