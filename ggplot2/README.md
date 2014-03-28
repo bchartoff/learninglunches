@@ -113,4 +113,77 @@ which will load the package (you need to do this once per R session).
 
 ###Let's plot!
 
+If you skipped right down to this section, that's ok, most of this code is reusable and copy-paste-able.
+
+* **Load the data:**
+
+First, tell R where to look for files, go to Misc > Change Working Directoyr (or cmd-D on a Mac)
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/workingdir.png "change working directory")
+
+Then type
+```
+data <- read.csv("ggplot_data.csv")
+```
+Which reads the file named `ggplot_data.csv` into a data frame, and assigns it to the variable named `data`.
+
+In R, you can cut down huge data files to just what you need, but for our purposes I started with a small file which lists lobbying behavior by Landscaping & Excavation companies (the amount they spent per year, that amount in 2012 dollars, and their ranking among other similar companies by amount spent). I trimmed and expanded on the source data with a Python script (included in this repo), but it could be done in R, excel, by hand, etc.
+
+##Plotting a line chart (aka fever chart)
+
+Remember, ggplot2 splits data into data (check), aesthetics, and geometries.
+
+* **Assigning aesthetics:**
+The `head()` function is a good way to take a look at the first few rows of a data frame, like so
+
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/head.png "the head function's output")
+
+Which is a nice quick way to check out column names etc.
+
+Now, run this command:
+
+```
+p <- ggplot(data, aes(x=year,y=rank,group=client,color=client))
+```
+This tells ggplot to use the `data` variable as it's data, then map the following aesthetics:
+* x values to the year column
+* y values to the rank column
+* group by client, so each client automatically gets put on it's own group
+* also color by client, so that each fever line/set of points/ etc. is a different color (this will automatically create a key saying which is which). Default ggplot colors are ugly but high contrast (they're evenly spaced out around the color wheel)
+
+Now we tell ggplot to plot this as a line graph:
+```
+p + geom_line()
+```
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line1.pdf "basic fever chart")
+```
+Next, let's add points to the line
+```
+p + geom_line() + geom_point()
+```
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line2.pdf "fever chart with dots")
+Awesome, this showed us 2 data points which were invisible before, since they only exist for 1 year.
+
+And hey, why don't we scale the size of the point by the number of dollars spent? Within geom_point, we can add *more* aesthetics, which are specific just to that geometry (so they won't effect the line chart), like so
+```
+p + geom_line() + geom_point(aes(size=data$infl_amt))
+```
+Note that when we refer to a column in data, `infl_amt` isn't enough anymore, since geom_point has no concept of what data it's associated with.
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line3.pdf "fever chart with dots scaled by dollars")
+Those smaller dots are tough to see, lets set a minimum and maximum radius.
+```
+p + geom_line() + geom_point(aes(size=data$infl_amt)) + scale_size_continuous(range=c(2,20))
+```
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line4.pdf "fever chart with dots scaled by dollars, larger dots")
+And finally, let's flip the y axis so that the highest rank is on top, and limit the years to just 2005 and later.
+```
+p + geom_line() + geom_point(aes(size=data$infl_amt)) + scale_size_continuous(range=c(2,20)) + scale_y_reverse() + scale_x_continuous(limits=c(2005,2014))
+```
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line5.pdf "fever chart with dots scaled by dollars, larger dots")
+
+Note that you can save any of these graphs as pdfs, then edit in Illustrator. Each element is a separate object, although you'll need to ungroup a lot and delete some invisible objects.
+
+
+
+
+
 
