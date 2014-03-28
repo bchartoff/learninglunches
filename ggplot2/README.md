@@ -207,7 +207,7 @@ p + geom_bar()
 (Note that you don't need to include `stat=bin` since it's the default behavior)
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/bar3.png "binned bar chart")
 
-
+R and ggplot2 can do lots (lots!) more, but this is a great place to start with sketches. Sketching with ggplot2 is a great way to produce lots of visualizations quickly, and easily modify them as data changes. Whether you use the R output as a framwork for the final visualization or build it in Illustrator/ D3/ etc, it's always a great place to start. Come find me if you have questions!
 
 
 
