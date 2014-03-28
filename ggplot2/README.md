@@ -155,7 +155,7 @@ Now we tell ggplot to plot this as a line graph:
 p + geom_line()
 ```
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line1.png "basic fever chart")
-```
+
 Next, let's add points to the line
 ```
 p + geom_line() + geom_point()
