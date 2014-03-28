@@ -98,6 +98,7 @@ ggplot2 is a graphing package based on the theories of data visualization spelle
 * data, which needs to be in a certain format (see below!)
 * geometries, such as bar, line, scatter, etc.
 * aesthetics (abbreviated aes), which spell out which data gets mapped to which aesthetic element (size, position, color, etc.)
+* statistics (stat), which tell ggplot how to analyze and sort the data (we just touch on this below)
 
 ###Getting started
 
@@ -181,6 +182,31 @@ p + geom_line() + geom_point(aes(size=data$infl_amt)) + scale_size_continuous(ra
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line5.png "fever chart with dots scaled by dollars, larger dots")
 
 Note that you can save any of these graphs as pdfs, then edit in Illustrator. Each element is a separate object, although you'll need to ungroup a lot and delete some invisible objects.
+
+##Plotting a bar graph
+It's super easy to convert your line chart to a bar chart. The data stays the same, and the aesthetics need to change a bit. Here's the command:
+```
+p <- ggplot(data, aes(x=year,y=infl_amt,fill=client)) 
+p + geom_bar(stat="identity")
+```
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/bar1.png "stacked bar chart")
+
+You'll notice a few differences. First, instead of `color=client` we said `fill=client`. In R, 'color' usuually refers to stroke color, and `fill` refers to fill color (so `color=client` for bars would graph black bars with colored strokes)
+
+The default behavior is to stack the bars. If you'd rather see them grouped, type:
+```
+p + geom_bar(stat="identity", position="dodge")
+```
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/bar2.png "stacked bar chart")
+
+Also, within geom_bar, we set `stat="identity"` (our first usage of `stat`, hooray!). This means that the height of the bars corresponds to the value of `infl_amt`. The default for bars is `stat=bin`, which makes the bar heights correspond to counts (the number of rows within each x category), so you don't need to map a varable to y. For example
+```
+p <- ggplot(data, aes(x=client,fill=client)) 
+p + geom_bar()
+```
+(Note that you don't need to include `stat=bin` since it's the default behavior)
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/bar3.png "binned bar chart")
+
 
 
 
