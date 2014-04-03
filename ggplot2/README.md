@@ -183,6 +183,28 @@ p + geom_line() + geom_point(aes(size=data$infl_amt)) + scale_size_continuous(ra
 
 Note that you can save any of these graphs as pdfs, then edit in Illustrator. Each element is a separate object, although you'll need to ungroup a lot and delete some invisible objects.
 
+##Plotting an area chart
+
+The difference between an area chart and a bar chart is pretty trivial. To get an area chart, try:
+
+```
+ggplot(data,aes(x=year,y=rank,group=client,fill=client)) + geom_area()
+```
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/area1.png "area chart")
+
+Yuck, this doesn't work well as an area chart, but you get the idea.
+
+Just two differences between the line chart example. One, `geom_line()` is replaced by `geom_area()`, and two, `color=client` is replaced by `fill=client`. In R, `color` refers to stroke, in general, and `fill` to...fill. So `color=client` would draw color coded lines with black areas beneath them.
+
+The default behavior is to stack areas. If you wanted to overlay areas you could try:
+
+```
+ggplot(data,aes(x=year,y=rank,group=client,fill=client)) + geom_area(position="identity",alpha=.5)
+```
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/area2.png "area chart without stacking")
+
+Still, yuck, but I'm sure you can imagine cases where this would be useful. Here `position="identity"` turns off stacking (the default behavior is `position=stack`), and `alpha=.5` sets an alpha value so you can (kind of) see all the traces.
+
 ##Plotting a bar graph
 It's super easy to convert your line chart to a bar chart. The data stays the same, and the aesthetics need to change a bit. Here's the command:
 ```
@@ -191,7 +213,7 @@ p + geom_bar(stat="identity")
 ```
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/bar1.png "stacked bar chart")
 
-You'll notice a few differences. First, instead of `color=client` we said `fill=client`. In R, 'color' usuually refers to stroke color, and `fill` refers to fill color (so `color=client` for bars would graph black bars with colored strokes)
+You'll notice a few differences.
 
 The default behavior is to stack the bars. If you'd rather see them grouped, type:
 ```
@@ -206,6 +228,37 @@ p + geom_bar()
 ```
 (Note that you don't need to include `stat=bin` since it's the default behavior)
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/bar3.png "binned bar chart")
+
+##A trick to reshape data
+
+One more R package (of the thousands out there) that can be useful. Let's say you want to graph two line charts about the One Call Concepts company: one which shows an amount, and one which shows the inflation adjusted amount. You could make a new .csv of just the One Call Concepts rows, no problem. Or, if you wanted to be sneaky in R, you could try:
+
+```
+data <- data[data$ultorg=="One Call Concepts",]
+```
+
+Remember `data$ultorg` is a *column*, named ultorg, and `data[something,]` is a *row*. So this translates in plain English to:
+>"find all rows in data where the value in the ultorg column is equal to 'One Call
+>Concepts', then return that as a new data frame and store in in `data`".
+
+Next, install and load the package called "reshape2" (so that's `install.packages("reshape2")` then `library("reshape2")`). There's a function in this library called "melt" which ggplot2 users love. I'll show what it does by example:
+```
+data <- melt(data,measure.vars=c("amt","infl_amt"))
+```
+This reshapes data into:
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/melt.png "output of melt function")
+
+So the variables listed in `measure.vars` become new values in the `variable` column, with their values in `value`. This is useful, since ggplot always wants *every row* to include *every variable* mapped to an aesthetic (x,y,group,etc.)
+
+So you could now graph:
+```
+ggplot(data,aes(x=year,y=value,group=variable,color=variable))+geom_line()
+
+![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/meltedline.png "melted line chart")
+
+Cool!? Yes.
+
+##Wrapping up
 
 R and ggplot2 can do lots (lots!) more, but this is a great place to start with sketches. Sketching with ggplot2 is a great way to produce lots of visualizations quickly, and easily modify them as data changes. Whether you use the R output as a framwork for the final visualization or build it in Illustrator/ D3/ etc, it's always a great place to start. Come find me if you have questions!
 
