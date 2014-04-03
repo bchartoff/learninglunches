@@ -253,6 +253,7 @@ So the variables listed in `measure.vars` become new values in the `variable` co
 So you could now graph:
 ```
 ggplot(data,aes(x=year,y=value,group=variable,color=variable))+geom_line()
+```
 
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/meltedline.png "melted line chart")
 
