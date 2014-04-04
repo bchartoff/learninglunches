@@ -6,7 +6,7 @@ R is an extremely powerful, open source, statistical programming language. Peopl
 
 ###Getting started
 
-First off, download R [here](http://cran.rstudio.com/) and install it. Once launched, the R program looks a lot like a Terminal or Command Prompt, it's a command line interface (CLI), where you type commands one at a time. Like other CLI's, you can hit the up arrow to see your previous commands, but it's easy to lose track of what you've been typing. I always write my R code in a text editor, then copy and paste that code into R. This also means that if I the data changes or I need to update a sketch, I can do so in a handful of clicks and keystrokes.
+First off, download R [here](http://cran.rstudio.com/) and install it. Once launched, the R program looks a lot like a Terminal or Command Prompt, it's a command line interface (CLI), where you type commands one at a time. Like other CLI's, you can hit the up arrow to see your previous commands, but it's easy to lose track of what you've been typing. I always write my R code in a text editor, then copy and paste that code into R. This also means that if the data changes or I need to update a sketch, I can do so in a handful of clicks and keystrokes.
 
 ###Notes on syntax
 
@@ -145,10 +145,10 @@ Now, run this command:
 ```
 p <- ggplot(data, aes(x=year,y=rank,group=client,color=client))
 ```
-This tells ggplot to use the `data` variable as it's data, then map the following aesthetics:
+This tells ggplot to use the `data` variable as its data, then map the following aesthetics:
 * x values to the year column
 * y values to the rank column
-* group by client, so each client automatically gets put on it's own group
+* group by client, so each client automatically gets put on its own group
 * also color by client, so that each fever line/set of points/ etc. is a different color (this will automatically create a key saying which is which). Default ggplot colors are ugly but high contrast (they're evenly spaced out around the color wheel)
 
 Now we tell ggplot to plot this as a line graph:
@@ -162,6 +162,7 @@ Next, let's add points to the line
 p + geom_line() + geom_point()
 ```
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line2.png "fever chart with dots")
+
 Awesome, this showed us 2 data points which were invisible before, since they only exist for 1 year.
 
 And hey, why don't we scale the size of the point by the number of dollars spent? Within geom_point, we can add *more* aesthetics, which are specific just to that geometry (so they won't effect the line chart), like so
@@ -169,12 +170,15 @@ And hey, why don't we scale the size of the point by the number of dollars spent
 p + geom_line() + geom_point(aes(size=data$infl_amt))
 ```
 Note that when we refer to a column in data, `infl_amt` isn't enough anymore, since geom_point has no concept of what data it's associated with.
+
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line3.png "fever chart with dots scaled by dollars")
+
 Those smaller dots are tough to see, lets set a minimum and maximum radius.
 ```
 p + geom_line() + geom_point(aes(size=data$infl_amt)) + scale_size_continuous(range=c(2,20))
 ```
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/line4.png "fever chart with dots scaled by dollars, larger dots")
+
 And finally, let's flip the y axis so that the highest rank is on top, and limit the years to just 2005 and later.
 ```
 p + geom_line() + geom_point(aes(size=data$infl_amt)) + scale_size_continuous(range=c(2,20)) + scale_y_reverse() + scale_x_continuous(limits=c(2005,2014))
@@ -245,7 +249,9 @@ Next, install and load the package called "reshape2" (so that's `install.package
 ```
 data <- melt(data,measure.vars=c("amt","infl_amt"))
 ```
+
 This reshapes data into:
+
 ![alt text](https://raw.github.com/bchartoff/learninglunches/master/ggplot2/images/melt.png "output of melt function")
 
 So the variables listed in `measure.vars` become new values in the `variable` column, with their values in `value`. This is useful, since ggplot always wants *every row* to include *every variable* mapped to an aesthetic (x,y,group,etc.)
